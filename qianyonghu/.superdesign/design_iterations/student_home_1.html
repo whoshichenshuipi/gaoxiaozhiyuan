@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home - Academic Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E88E5 0%, #1565C0 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC] text-[#1E293B] antialiased">
+    <!-- Top Nav -->
+    <nav class="h-20 bg-white border-b border-slate-200 flex items-center justify-between px-12 sticky top-0 z-50">
+        <div class="flex items-center space-x-4">
+            <div
+                class="w-10 h-10 bg-[#1E88E5] rounded-xl flex items-center justify-center text-white text-xl font-bold">
+                高</div>
+            <span class="text-xl font-bold tracking-tight text-[#1E293B]">高考志愿规划师</span>
+        </div>
+        <div class="flex items-center space-x-8">
+            <div class="flex space-x-6 text-sm font-medium text-slate-500">
+                <a href="#" class="text-[#1E88E5]">首页</a>
+                <a href="#" class="hover:text-[#1E88E5] transition-colors">查院校</a>
+                <a href="#" class="hover:text-[#1E88E5] transition-colors">智能推荐</a>
+                <a href="#" class="hover:text-[#1E88E5] transition-colors">社区</a>
+            </div>
+            <div class="w-px h-6 bg-slate-200"></div>
+            <div class="flex items-center space-x-3">
+                <span class="text-sm font-bold">张同学</span>
+                <div
+                    class="w-10 h-10 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-sm">
+                    👤</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto py-12 px-8 space-y-12">
+        <!-- Hero Search -->
+        <section
+            class="hero-gradient rounded-[2.5rem] p-16 text-center text-white relative overflow-hidden shadow-2xl shadow-blue-900/20">
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold tracking-tight mb-4">精准匹配，开启名校之旅</h2>
+                <p class="opacity-80 text-lg mb-10">输入您的画像信息，AI 助您在 2700+ 高校中找到最优解</p>
+
+                <div class="bg-white rounded-2xl p-2 flex shadow-2xl overflow-hidden">
+                    <input type="text" placeholder="搜索院校、专业代码或名称..."
+                        class="flex-1 px-6 py-4 text-slate-900 outline-none text-lg">
+                    <button
+                        class="bg-[#1E88E5] hover:bg-[#1565C0] px-8 py-4 rounded-xl font-bold transition-all">全库检索</button>
+                </div>
+
+                <div class="mt-8 flex justify-center space-x-6 text-sm font-medium opacity-70">
+                    <span>热门：计算机科学</span>
+                    <span>临床医学</span>
+                    <span>人工智能</span>
+                    <span>法学</span>
+                </div>
+            </div>
+            <!-- Decors -->
+            <div class="absolute -top-12 -right-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-12 -left-12 w-48 h-48 bg-blue-400/20 rounded-full blur-3xl"></div>
+        </section>
+
+        <!-- Bento Board -->
+        <div class="grid grid-cols-12 gap-8">
+            <!-- Personalized Info Card -->
+            <div class="col-span-4 bg-white rounded-[2rem] border border-slate-200 p-10 shadow-sm">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-xl font-bold">高考画像</h3>
+                    <button class="text-sm text-[#1E88E5] font-bold">更新配置 →</button>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-center py-4 border-b border-slate-100">
+                        <span class="text-slate-500 font-medium">所在省份</span>
+                        <span class="font-bold">广东 / 物理类</span>
+                    </div>
+                    <div class="flex justify-between items-center py-4 border-b border-slate-100">
+                        <span class="text-slate-500 font-medium">预估总分</span>
+                        <div class="flex items-baseline space-x-1">
+                            <span class="text-3xl font-bold text-[#1E88E5]">645</span>
+                            <span class="text-xs text-slate-400">分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                    <p class="text-emerald-700 text-sm font-bold leading-relaxed">
+                        🎉 您的分数当前位于全省前 <span class="text-lg">1.5%</span>，建议关注 Top 20 重点院校。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="col-span-5 grid grid-cols-2 gap-6">
+                <div
+                    class="bg-white rounded-[2rem] border border-slate-200 p-8 hover:border-[#1E88E5] cursor-pointer transition-all group">
+                    <div
+                        class="w-12 h-12 bg-blue-50 text-[#1E88E5] rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        ✨</div>
+                    <h4 class="font-bold mb-2">智能志愿推荐</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">基于冲引稳保算法，一键生成匹配方案</p>
+                </div>
+                <div
+                    class="bg-white rounded-[2rem] border border-slate-200 p-8 hover:border-[#1E88E5] cursor-pointer transition-all group">
+                    <div
+                        class="w-12 h-12 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        📋</div>
+                    <h4 class="font-bold mb-2">方案管理中心</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">管理并分析您的模拟志愿填报方案</p>
+                </div>
+                <div
+                    class="bg-white rounded-[2rem] border border-slate-200 p-8 hover:border-[#1E88E5] cursor-pointer transition-all group">
+                    <div
+                        class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        🔍</div>
+                    <h4 class="font-bold mb-2">分数/位次查核</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">百万级招生数据秒级查询，精准到校</p>
+                </div>
+                <div
+                    class="bg-[#1E293B] rounded-[2rem] p-8 text-white relative overflow-hidden group cursor-pointer shadow-xl">
+                    <h4 class="font-bold mb-2">AI 咨询助手</h4>
+                    <p class="text-xs opacity-60 leading-relaxed">RAG 知识库加持，随时答疑解惑</p>
+                    <div class="mt-4 text-xs font-bold text-[#1E88E5]">立即对话 →</div>
+                    <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+
+            <!-- Notice / Latest -->
+            <div class="col-span-3 bg-white rounded-[2rem] border border-slate-200 p-8">
+                <h3 class="font-bold mb-6 text-sm uppercase tracking-widest text-slate-400">高校动态</h3>
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-[#1E88E5] rounded-full"></span>
+                            <p class="text-sm font-bold">中山大学开放日</p>
+                        </div>
+                        <p class="text-xs text-slate-400">2024年本科招生章程发布...</p>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 bg-slate-300 rounded-full"></span>
+                            <p class="text-sm font-bold">清华大学人工智能新专业</p>
+                        </div>
+                        <p class="text-xs text-slate-400">聚焦前沿 AI 算法与芯片设计</p>
+                    </div>
+                    <button
+                        class="w-full mt-4 py-3 bg-slate-50 text-slate-500 text-xs font-bold rounded-xl hover:bg-slate-100 transition-all">查看全部动态</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

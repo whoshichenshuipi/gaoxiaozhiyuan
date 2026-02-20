@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Home - Immersion Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .mesh-bg {
+            background-color: #f8fafc;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(210, 100%, 75%, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(280, 100%, 75%, 0.1) 0, transparent 50%);
+        }
+
+        .card-blur {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(30, 136, 229, 0.15);
+        }
+    </style>
+</head>
+
+<body class="mesh-bg min-h-screen text-[#0F172A] antialiased p-8 lg:p-12">
+    <!-- Floating Nav -->
+    <nav
+        class="max-w-7xl mx-auto h-20 card-blur rounded-[2rem] shadow-xl shadow-slate-200/50 flex items-center justify-between px-10 mb-12 border border-white sticky top-8 z-50">
+        <div class="flex items-center space-x-3">
+            <div
+                class="w-9 h-9 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-full shadow-lg shadow-blue-500/20">
+            </div>
+            <span class="text-xl font-black italic tracking-tighter">GK.STUDENT</span>
+        </div>
+        <div class="flex items-center space-x-12">
+            <div class="hidden md:flex space-x-8 text-xs font-black uppercase tracking-widest text-slate-400">
+                <a href="#" class="text-blue-600">Home</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Find Uni</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">AI Recommend</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Feed</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button
+                    class="w-10 h-10 rounded-full bg-white/50 border border-white flex items-center justify-center text-xl">🔍</button>
+                <div
+                    class="w-10 h-10 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 flex items-center justify-center text-white text-xs font-bold">
+                    Z</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto grid grid-cols-12 gap-8">
+        <!-- Huge Search Area -->
+        <div class="col-span-12 lg:col-span-8 space-y-8">
+            <div
+                class="p-16 rounded-[4rem] bg-gradient-to-br from-[#1E88E5] to-[#4F46E5] text-white relative overflow-hidden shadow-2xl group">
+                <div class="relative z-10">
+                    <h1 class="text-5xl font-black tracking-tight leading-tight mb-6">发现你的未来大学</h1>
+                    <p class="text-white/60 text-lg mb-12 max-w-lg">利用 RAG 增强型 AI 引擎，深度解析 3000+ 高校招生实时数据。</p>
+                    <div
+                        class="flex items-center bg-white/10 backdrop-blur-md rounded-[2.5rem] p-4 border border-white/20 shadow-inner group-focus-within:bg-white transition-all">
+                        <input type="text" placeholder="搜索院校简章、专业分数、位次要求..."
+                            class="bg-transparent flex-1 px-8 py-4 outline-none text-white group-focus-within:text-slate-900 placeholder:text-white/50 group-focus-within:placeholder:text-slate-400">
+                        <button
+                            class="bg-white text-[#1E88E5] px-10 py-4 rounded-[2rem] font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform active:scale-95 shadow-lg">Start
+                            AI Search</button>
+                    </div>
+                </div>
+                <!-- Abstract Circles -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-pulse">
+                </div>
+                <div class="absolute top-1/2 -left-20 w-64 h-64 bg-cyan-400/20 rounded-full blur-2xl"></div>
+            </div>
+
+            <!-- Bento Features -->
+            <div class="grid grid-cols-2 gap-8">
+                <div class="card-blur p-12 rounded-[4rem] group cursor-pointer card-glow transition-all">
+                    <div
+                        class="w-16 h-16 bg-blue-500/10 text-blue-600 rounded-[2rem] flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">
+                        ✨</div>
+                    <h3 class="text-2xl font-black mb-4">智选推荐</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">深度神经网络算法，根据位次趋势动态计算录取概率。</p>
+                </div>
+                <div class="card-blur p-12 rounded-[4rem] group cursor-pointer card-glow transition-all">
+                    <div
+                        class="w-16 h-16 bg-emerald-500/10 text-emerald-600 rounded-[2rem] flex items-center justify-center text-3xl mb-8 group-hover:rotate-12 transition-transform">
+                        📊</div>
+                    <h3 class="text-2xl font-black mb-4">方案推演</h3>
+                    <p class="text-slate-500 leading-relaxed font-medium">多维度评估志愿表风险，模拟真实填报逻辑与分流预警。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Panel -->
+        <div class="col-span-12 lg:col-span-4 space-y-8">
+            <!-- Profile Card -->
+            <div class="bg-white/80 p-10 rounded-[4rem] border border-white shadow-2xl shadow-slate-200/50">
+                <div class="flex items-center space-x-6 mb-10">
+                    <div class="w-16 h-16 rounded-[1.5rem] bg-indigo-50 flex items-center justify-center text-3xl">📝
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-black">填报画像</h4>
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Status: Verified</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div
+                        class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex justify-between items-center group hover:bg-white hover:border-blue-200 transition-all cursor-pointer">
+                        <span class="text-sm font-bold text-slate-500">高考总分</span>
+                        <span class="text-2xl font-black text-blue-600">645 <span
+                                class="text-[10px] font-bold text-slate-400">Pts</span></span>
+                    </div>
+                    <div
+                        class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex justify-between items-center group hover:bg-white hover:border-blue-200 transition-all cursor-pointer">
+                        <span class="text-sm font-bold text-slate-500">累计收藏</span>
+                        <span class="text-2xl font-black">12 <span
+                                class="text-[10px] font-bold text-slate-400">Units</span></span>
+                    </div>
+                </div>
+                <button
+                    class="w-full mt-8 py-5 bg-slate-900 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest hover:bg-blue-600 transition-all shadow-xl shadow-slate-900/20 active:scale-95">Complete
+                    Profile</button>
+            </div>
+
+            <!-- Mini Chat Entry -->
+            <div
+                class="bg-gradient-to-br from-indigo-600 to-purple-700 p-10 rounded-[4rem] text-white shadow-2xl relative overflow-hidden group cursor-pointer hover:shadow-indigo-500/20 transition-all">
+                <h4 class="text-2xl font-black mb-4">Ask AI Assistant</h4>
+                <p class="text-indigo-100/70 text-sm leading-relaxed mb-8">24/7 智能问答，基于最新的 RAG 技术解析各校招生细则。</p>
+                <div class="flex items-center space-x-2 text-xs font-black uppercase tracking-[0.2em]">
+                    <span>Enter Conversation</span>
+                    <span class="group-hover:translate-x-2 transition-transform">→</span>
+                </div>
+                <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

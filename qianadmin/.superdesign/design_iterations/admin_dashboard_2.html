@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Premium Dark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f1115] text-slate-300 antialiased">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-20 lg:w-72 bg-[#16191f] border-r border-slate-800/50 flex flex-col transition-all">
+            <div class="p-8 pb-10">
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/30">
+                        G</div>
+                    <div class="hidden lg:block">
+                        <h1 class="text-lg font-bold text-white tracking-tight">GK Admin</h1>
+                        <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]">Management System</p>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-4 space-y-2">
+                <a href="#"
+                    class="flex items-center lg:space-x-4 p-4 lg:px-6 bg-blue-600/10 text-blue-400 rounded-2xl border border-blue-600/20 glow transition-all">
+                    <span class="text-xl">📊</span>
+                    <span class="hidden lg:block font-semibold">Dashboard</span>
+                </a>
+                <a href="#"
+                    class="flex items-center lg:space-x-4 p-4 lg:px-6 hover:bg-slate-800/50 text-slate-500 hover:text-white rounded-2xl transition-all">
+                    <span class="text-xl">👥</span>
+                    <span class="hidden lg:block font-medium">Users</span>
+                </a>
+                <a href="#"
+                    class="flex items-center lg:space-x-4 p-4 lg:px-6 hover:bg-slate-800/50 text-slate-500 hover:text-white rounded-2xl transition-all">
+                    <span class="text-xl">🏫</span>
+                    <span class="hidden lg:block font-medium">Institutions</span>
+                </a>
+                <div class="h-px bg-slate-800/50 mx-6 my-6"></div>
+                <a href="#"
+                    class="flex items-center lg:space-x-4 p-4 lg:px-6 hover:bg-slate-800/50 text-slate-500 hover:text-white rounded-2xl transition-all">
+                    <span class="text-xl">🤖</span>
+                    <span class="hidden lg:block font-medium">RAG Audit</span>
+                </a>
+                <a href="#"
+                    class="flex items-center lg:space-x-4 p-4 lg:px-6 hover:bg-slate-800/50 text-slate-500 hover:text-white rounded-2xl transition-all">
+                    <span class="text-xl">📝</span>
+                    <span class="hidden lg:block font-medium">Feedbacks</span>
+                </a>
+            </nav>
+
+            <div class="p-6">
+                <div class="bg-slate-800/30 p-4 rounded-3xl border border-slate-700/30 hidden lg:block">
+                    <p class="text-xs text-slate-500 font-medium">System Version</p>
+                    <p class="text-sm text-white font-bold mt-1">v2.1.0-stable</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <header class="h-24 flex items-center justify-between px-12">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">System Dashboard</h2>
+                    <p class="text-sm text-slate-500 mt-1">Monitor all service activities in real-time.</p>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <button class="text-slate-500 hover:text-white transition-all">🔍</button>
+                    <button class="relative text-slate-500 hover:text-white transition-all">
+                        🔔
+                        <span
+                            class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-blue-500 rounded-full border-2 border-[#0f1115]"></span>
+                    </button>
+                    <div class="h-10 w-px bg-slate-800 mx-2"></div>
+                    <div
+                        class="flex items-center space-x-3 bg-slate-800/30 p-1.5 pr-4 rounded-2xl border border-slate-700/50">
+                        <div
+                            class="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold">
+                            AD</div>
+                        <span class="text-sm font-semibold text-white">Super Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto px-12 py-6 space-y-10">
+                <!-- Data Hub -->
+                <div class="grid grid-cols-4 gap-8">
+                    <div
+                        class="bg-gradient-to-br from-[#1c212a] to-[#16191f] p-8 rounded-[2.5rem] border border-slate-800/50 shadow-2xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                        <div
+                            class="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-600/5 rounded-full blur-2xl group-hover:bg-blue-600/10 transition-colors">
+                        </div>
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Total Active Users</p>
+                        <h4 class="text-4xl font-bold text-white mt-4">12,840</h4>
+                        <div class="mt-6 flex items-center space-x-3">
+                            <span
+                                class="px-2 py-1 bg-blue-600/10 text-blue-400 text-[10px] font-bold rounded-lg border border-blue-600/20">+12.5%</span>
+                            <span class="text-[10px] text-slate-500">vs Last Month</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-[#1c212a] to-[#16191f] p-8 rounded-[2.5rem] border border-slate-800/50 shadow-2xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Pending Audits</p>
+                        <h4 class="text-4xl font-bold text-white mt-4">08</h4>
+                        <div class="mt-6 flex items-center space-x-3">
+                            <span
+                                class="px-2 py-1 bg-pink-600/10 text-pink-400 text-[10px] font-bold rounded-lg border border-pink-600/20">Critical</span>
+                            <span class="text-[10px] text-slate-500">8 Institutions</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-[#1c212a] to-[#16191f] p-8 rounded-[2.5rem] border border-slate-800/50 shadow-2xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Pending Feedbacks</p>
+                        <h4 class="text-4xl font-bold text-white mt-4">25</h4>
+                        <div class="mt-6 flex items-center space-x-3">
+                            <span
+                                class="px-2 py-1 bg-amber-600/10 text-amber-400 text-[10px] font-bold rounded-lg border border-amber-600/20">Active</span>
+                            <span class="text-[10px] text-slate-500">Avg 4h Response</span>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-[#1c212a] to-[#16191f] p-8 rounded-[2.5rem] border border-slate-800/50 shadow-2xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
+                        <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Daily Q&A Capacity</p>
+                        <h4 class="text-4xl font-bold text-white mt-4">1,200</h4>
+                        <div class="mt-6 flex items-center space-x-3">
+                            <span
+                                class="px-2 py-1 bg-emerald-600/10 text-emerald-400 text-[10px] font-bold rounded-lg border border-emerald-600/20">Optimized</span>
+                            <span class="text-[10px] text-slate-500">98% Success</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analysis Center -->
+                <div class="bg-[#16191f]/50 p-1 rounded-[3rem] border border-slate-800/50">
+                    <div class="bg-[#1c212a] rounded-[2.8rem] p-10">
+                        <div class="flex justify-between items-center mb-10">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Resource Dynamics</h3>
+                                <p class="text-sm text-slate-500 mt-1">Real-time breakdown of RAG and API requests.</p>
+                            </div>
+                            <div
+                                class="flex items-center space-x-4 bg-slate-900/50 p-1.5 rounded-2xl border border-slate-800/50">
+                                <button
+                                    class="px-6 py-2 bg-blue-600 text-white rounded-xl text-xs font-bold shadow-lg shadow-blue-600/20 transition-all">Live
+                                    Stream</button>
+                                <button
+                                    class="px-6 py-2 text-slate-500 text-xs font-bold hover:text-slate-300">Archive</button>
+                            </div>
+                        </div>
+                        <div
+                            class="h-80 w-full bg-slate-900/30 rounded-3xl border border-slate-800 shadow-inner flex items-center justify-center group">
+                            <div
+                                class="text-slate-600 font-bold tracking-widest text-sm uppercase opacity-30 group-hover:opacity-60 transition-opacity">
+                                :: Virtual Charting Engine ::
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

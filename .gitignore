@@ -1,0 +1,27 @@
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Logs
+logs/
+*.log
+
+# Temp
+tmp/
+temp/
+
+# IDE
+.vscode/
+.idea/
+.gemini/

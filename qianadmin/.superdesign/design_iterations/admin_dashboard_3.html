@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Modern Glass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .bg-mesh {
+            background-color: #f0f4f8;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(210, 100%, 75%, 0.1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(280, 100%, 75%, 0.1) 0, transparent 50%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+
+<body class="bg-mesh min-h-screen text-slate-800 antialiased overflow-hidden">
+    <!-- Navbar (Horizontal Layout Variation) -->
+    <nav
+        class="h-20 bg-white/50 backdrop-blur-xl border-b border-white/80 flex items-center justify-between px-12 z-50 sticky top-0">
+        <div class="flex items-center space-x-12">
+            <div class="flex items-center space-x-3">
+                <div
+                    class="w-10 h-10 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-full shadow-lg flex items-center justify-center text-white font-bold">
+                    GK</div>
+                <span
+                    class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">高考志愿后台</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-sm font-bold border-b-2 border-blue-500 pb-1 text-blue-600">数据中心</a>
+                <a href="#" class="text-sm font-semibold text-slate-500 hover:text-blue-500 transition-colors">用户分析</a>
+                <a href="#" class="text-sm font-semibold text-slate-500 hover:text-blue-500 transition-colors">RAG审核</a>
+                <a href="#" class="text-sm font-semibold text-slate-500 hover:text-blue-500 transition-colors">策略配置</a>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <div class="bg-white/80 px-4 py-2 rounded-2xl flex items-center space-x-3 border border-white">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 shadow-md"></div>
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold">超级管理员</span>
+                    <span class="text-[10px] text-slate-500">最后登录: 10:24</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-12 space-y-12">
+        <!-- Overview -->
+        <div class="flex items-end justify-between">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 tracking-tight">今日业务概览</h1>
+                <p class="text-slate-500 mt-2">系统当前运行稳定，RAG 模块负载正在动态优化中。</p>
+            </div>
+            <button
+                class="bg-blue-600 text-white px-8 py-3 rounded-2xl font-bold shadow-xl shadow-blue-600/20 hover:scale-105 transition-all active:scale-95">导出今日报表</button>
+        </div>
+
+        <!-- Bento Grid Stats -->
+        <div class="grid grid-cols-4 gap-8">
+            <div class="glass-card p-10 rounded-[3rem] group">
+                <div
+                    class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
+                    💙</div>
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">活跃用户数</p>
+                <h3 class="text-4xl font-extrabold text-slate-900 mt-2">12,840</h3>
+                <div
+                    class="mt-6 flex items-center space-x-2 text-emerald-500 bg-emerald-50 w-fit px-3 py-1 rounded-full text-xs font-bold">
+                    <span>+12%</span>
+                </div>
+            </div>
+            <div class="glass-card p-10 rounded-[3rem] group">
+                <div
+                    class="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
+                    🎓</div>
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">待审高校数</p>
+                <h3 class="text-4xl font-extrabold text-slate-900 mt-2">08</h3>
+                <div
+                    class="mt-6 flex items-center space-x-2 text-rose-500 bg-rose-50 w-fit px-3 py-1 rounded-full text-xs font-bold">
+                    <span>紧急处理中</span>
+                </div>
+            </div>
+            <div class="glass-card p-10 rounded-[3rem] group">
+                <div
+                    class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
+                    💬</div>
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">今日处理量</p>
+                <h3 class="text-4xl font-extrabold text-slate-900 mt-2">1,200</h3>
+                <div
+                    class="mt-6 flex items-center space-x-2 text-blue-500 bg-blue-50 w-fit px-3 py-1 rounded-full text-xs font-bold">
+                    <span>已完成 85%</span>
+                </div>
+            </div>
+            <div class="glass-card p-10 rounded-[3rem] group">
+                <div
+                    class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
+                    ⚡</div>
+                <p class="text-sm font-bold text-slate-400 uppercase tracking-widest">系统吞吐量</p>
+                <h3 class="text-4xl font-extrabold text-slate-900 mt-2">99.9%</h3>
+                <div
+                    class="mt-6 flex items-center space-x-2 text-purple-500 bg-purple-50 w-fit px-3 py-1 rounded-full text-xs font-bold">
+                    <span>负载均衡</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Panels -->
+        <div class="grid grid-cols-12 gap-8">
+            <div
+                class="col-span-8 bg-white/40 backdrop-blur-3xl rounded-[4rem] border border-white p-12 shadow-2xl shadow-blue-900/5">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="text-2xl font-extrabold text-slate-900 flex items-center">
+                        <span class="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
+                        流量动态分析
+                    </h2>
+                    <div class="flex items-center space-x-2">
+                        <div class="h-2 w-32 bg-slate-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 w-[72%]"></div>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400">72% 容量</span>
+                    </div>
+                </div>
+                <div
+                    class="h-72 w-full bg-gradient-to-b from-blue-50/50 to-white/0 rounded-[3rem] border border-white/50 flex items-center justify-center text-slate-300 font-bold uppercase tracking-[0.4em] text-sm">
+                    Interactive Grid Engine
+                </div>
+            </div>
+
+            <div class="col-span-4 space-y-8">
+                <div class="glass-card p-8 rounded-[3.5rem] relative overflow-hidden group">
+                    <div
+                        class="absolute -right-6 -top-6 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl group-hover:bg-blue-500/10 transition-colors">
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">核心待办</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center group/item cursor-pointer">
+                            <div class="w-1.5 h-10 bg-blue-500 rounded-full mr-4 group-hover/item:h-12 transition-all">
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-bold">RAG 知识片段审核</p>
+                                <p class="text-[11px] text-slate-400 mt-0.5">清华大学 - 总计 12 条</p>
+                            </div>
+                            <button
+                                class="bg-blue-600/10 text-blue-600 px-3 py-1.5 rounded-xl text-[10px] font-bold">处理</button>
+                        </div>
+                        <div class="flex items-center group/item cursor-pointer">
+                            <div class="w-1.5 h-10 bg-slate-200 rounded-full mr-4 group-hover/item:h-12 transition-all">
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-bold">用户反馈中心</p>
+                                <p class="text-[11px] text-slate-400 mt-0.5">待分配 - 共 25 条</p>
+                            </div>
+                            <button
+                                class="bg-slate-100 text-slate-400 px-3 py-1.5 rounded-xl text-[10px] font-bold">指派</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gradient-to-br from-indigo-600 to-blue-700 p-8 rounded-[3.5rem] text-white shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest opacity-60">System Notification</p>
+                    <h4 class="text-lg font-bold mt-2">数据库维护通知</h4>
+                    <p class="text-xs mt-3 opacity-80 leading-relaxed">今晚 02:00 将进行 RAG 向量库定期冷缩容，预计影响 API 响应 30ms。</p>
+                    <button
+                        class="mt-6 bg-white/20 hover:bg-white/30 backdrop-blur-md px-6 py-2 rounded-2xl text-xs font-bold transition-all">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
